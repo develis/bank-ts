@@ -73,8 +73,8 @@ app.get("/cadastro", checkNotAuthenticated, (req: Request, res: Response): void 
 });
 
 app.get("/transferir/(:id)", (req: Request, res: Response): void => {
-    let id = req.params.id
-    db.query('SELECT * FROM clientesbancarios WHERE id = ' + id, (err, achado, fields): void => {
+    let id_cliente = req.params.id
+    db.query('SELECT * FROM clientesbancarios WHERE id = 1', (err, achado, fields): void => {
         res.render('transferir.ejs', {
             id: achado[0].id,
             cliente_saldo: achado[0].saldo
@@ -83,13 +83,13 @@ app.get("/transferir/(:id)", (req: Request, res: Response): void => {
 });
 
 app.post("/transferir/(:id)", (req: Request, res: Response): void => {
-    let id = req.params.id
+    let id_cliente = req.params.id
     var valor = req.body.valor
-    var update_saldo = `UPDATE clientesbancarios SET saldo = saldo - ${valor} WHERE id = ${id}`
+    var update_saldo = `UPDATE clientesbancarios SET saldo = saldo - ${valor} WHERE id = 1`
     db.query(update_saldo, (err, res): void => {
         if (err) throw err
-        res.redirect('/')
     })
+    res.redirect('/')
     // db.query('SELECT * FROM clientesbancarios WHERE id = ' + id, (err, achado, fields): void =>{
     //     res.render('transferir.ejs', {
     //         id: achado[0].id,
