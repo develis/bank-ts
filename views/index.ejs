@@ -1,0 +1,58 @@
+<%- include('./header'); %>
+
+    <main class="indexmain">
+        <% clientes_achados.forEach(function(clientes){ %>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Olá <%= clientes.nome %></h1>
+                    <p>
+                        Seu saldo é: R$ <%= clientes.saldo %>
+                    </p>
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger">Sair</button>
+                    </form>
+                    <a href="/transferir/<%= clientes.id %>" class="btn btn-success">Fazer transferência</a>
+                </div>
+            </div>
+            <% }) %>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6"></div>
+                </div>
+                <section class="container-fluid">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="https://as1.ftcdn.net/v2/jpg/03/20/21/38/1000_F_320213833_YIvukGSF68Y3NnnMxomfKb7wPzVRnxbB.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Aqui seu dinheiro faz festa!</h5>
+                                    <p class="card-text"><a href="#">Conheça nossos planos de investimento</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="card">
+                                <img src="https://as2.ftcdn.net/v2/jpg/04/32/81/69/1000_F_432816994_HvRSqIEw50ZIxrmCEWjCSCzdohpb9xVH.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sem anuidade</h5>
+                                    <p class="card-text"><a href="#">Moderno, simples
+                                            e gratuito, pra você ir mais longe</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card text-center">
+                            <img src="https://as1.ftcdn.net/v2/jpg/03/96/95/18/500_F_396951834_aNWd4bsawZzDxxweQiBJJkKHpkjn8CWZ.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sua conta, do seu jeito</h5>
+                                <p class="card-text"><a href="#">Baixe o aplicativo e saiba mais</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+    </main>
+
+    <%- include('./footer'); %>

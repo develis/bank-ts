@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    font-family: century Gothic;
+    color: black;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    :root {
+        --containerSize: 550px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    :root {
+        --containerSize: 750px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    :root {
+        --containerSize: 970px;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    :root {
+        --containerSize: 1170px;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-5 {
+    border: solid 1px !important;
+}
+
+.col-1 {
+    width: 8.33333%;
+}
+
+span:before {
+    content: var(--screenSize);
+}
+
+.nav {
+    color: black;
+}
+
+.navlogo {
+    width: 12vh;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: black;
+    overflow: auto;
+}
+
+.nav-link:hover {
+    color: #F2CB05 !important;
+}
+
+.btn {
+    justify-content: end;
+}
+
+.indexmain {
+    background-color: #fcfcfc;
+    height: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 90%;
+}
+
+.card {
+    border: #8d8d8d;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    margin-bottom: 15%;
+    align-content: space-between;
+    margin-top: 12px;
+}
+
+.card-text {
+    color: black !important;
+}
+
+.item {
+    background-color: transparent;
+    padding: 15px;
+    color: black;
+}
+
+.notes {
+    font-size: 16px;
+}
+
+.container-fluid {
+    margin-bottom: 20%;
+}
+
+.container {
+    justify-items: center;
+    border-top: #8d8d8d solid 1px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    background: rgb(255, 255, 236);
+}
+
+.socialslogo {
+    width: 3vh;
+    margin-top: 5px;
+}
+
+.copyright {
+    font-size: smaller;
+    color: whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #F2CB05 !important;
+    background-color: transparent;
+}
+
+.footernav {
+    background-color: black;
+    height: 12vh;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 25px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+}
+
+.arrow {
+    width: 6vh;
+}

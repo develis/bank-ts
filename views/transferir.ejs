@@ -1,0 +1,21 @@
+<%- include('./header'); %>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <h1 class="text-center h1_secoes">Editar Produto</h1>
+                <hr>
+                <p class="text-justify">
+                <form action="/transferir/<%= id %>" method="POST" class="form_cadastro">
+                    <input type="text" placeholder="Seu saldo:" name="cliente_saldo" id="cliente_saldo"
+                        class="input_form" value="<%= cliente_saldo %>">
+                    <input type="number" name="valor" id="valor" placeholder="Valor para transferência">
+                    <input type="number" name="conta" id="conta" placeholder="Conta para transferência">
+                    <input type="number" name="agencia" id="agencia" placeholder="Agência para transferência">
+                    <button type="submit" class="botao_form">Transferir</button>
+                </form>
+                </p>
+            </div>
+    </main>
+
+    <%- include('./footer'); %>

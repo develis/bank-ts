@@ -1,0 +1,42 @@
+<%- include('./header'); %>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 class="darker_color">Ainda não é cliente? Cadastre-se!</h1>
+                <p>Preencha as informações rapidamente para ter acesso a sua conta no melhor banco online:</p>
+                <form action="/cadastro" method="post">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Nome" class="input_login_cad" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email" class="input_login_cad"
+                            required>
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="password" placeholder="Senha" class="input_login_cad"
+                            required>
+                    </div>
+                    <div>
+                        <input type="text" id="cpf" name="cpf" placeholder="CPF" class="input_login_cad" required>
+                    </div>
+                    <div>
+                        <input type="number" id="agencia" name="agencia" placeholder="Agência" class="input_login_cad"
+                            required>
+                    </div>
+                    <div>
+                        <input type="number" id="conta" name="conta" placeholder="Conta" class="input_login_cad"
+                            required>
+                    </div>
+                    <input type="number" id="saldo" name="saldo" hidden value="1000000">
+                    <button type="submit" class="botao_submit">Cadastrar</button>
+                </form>
+                <p class="link">
+                    <a href="/login" class="link">Já possui uma conta? Login.</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+<%- include('./footer'); %>

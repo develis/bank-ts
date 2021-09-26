@@ -1,0 +1,35 @@
+<%- include('./header'); %>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <h1 class="darker_color">Cliente? Faça seu login!</h1>
+                <p>Informe seu email e senha nos campos abaixo:</p>
+                <p class="alert_red">
+                    <% if (messages.error) { %>
+                        <%= messages.error %>
+                            <% } %>
+                </p>
+                <form action="/login" method="post">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email" class="input_login_cad"
+                            required>
+                        <small>Insira seu email [nome@dominio.com]</small>
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="password" placeholder="Senha" class="input_login_cad"
+                            required>
+                        <small>Insira sua senha [*******]</small>
+                    </div>
+                    <button type="submit" class="botao_submit">Login</button>
+                </form>
+                <p class="link">
+                    <a href="/cadastro" class="link">Não possui uma conta? Cadastre-se.</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+<%- include('./footer'); %>
